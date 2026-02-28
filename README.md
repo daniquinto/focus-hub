@@ -1,226 +1,370 @@
-# Personal Work OS – Habits, Tasks and Projects Platform
+# Personal Work OS – Student Edition  
+Personal Work OS – Student Edition is a web platform designed specifically for **student life**.  
+It centralizes **classes, assignments, study sessions, habits and personal projects** into one calm, aesthetic and highly personalized workspace.
 
-Personal Work OS is a web platform that centralizes personal productivity in one place by combining **tasks, habits and projects** into a single workflow-oriented system.
+This is not a generic to-do app.  
+It’s a personal study + life operating system that helps you:
+- stay on top of your subjects
+- visualize your schedule in a cute way
+- know exactly what to study and when
+- reduce mental overload
 
-The goal is to build a personal “operating system” for work and study that helps users decide what to focus on every day, track consistency, and manage long-term goals.
-
-This project is designed to be developed incrementally following a three-phase methodology defined for the course.
+The platform is built incrementally using a three-phase methodology defined for the course.
 
 ---
 
 ## Project Concept
 
-The platform allows a user to:
+The platform allows a student to:
 
-- Organize projects and their related tasks
-- Track personal habits and consistency
-- Manage pending items using an inbox-first workflow
-- View a unified “Today” dashboard that combines:
-  - tasks due today or overdue
-  - habits scheduled for today
-  - next actions from active projects
+- manage academic subjects (assignatures)
+- organize assignments, exams and personal tasks by subject
+- visually manage their weekly class schedule
+- plan study sessions per subject
+- track personal habits
+- maintain personal or side projects (not only academic)
+- see a soft and friendly “Today” dashboard that combines:
+  - today’s classes
+  - tasks and assignments due
+  - planned study blocks
+  - habits for the day
 
-The application focuses on simplicity, clarity and real productivity use cases rather than being a basic to-do list.
+The core idea is:
+**everything related to your student life lives in one calm, visual system.**
+
+---
+
+## Student-Centered Design Principles
+
+- calm and distraction-free interface  
+- cute and soft visual style (pastel, rounded cards, friendly typography)
+- low cognitive load
+- visual schedule instead of tables
+- subject-first organization (not project-first)
 
 ---
 
 ## Core Modules
 
-- Inbox  
-  A quick capture space for ideas, tasks or notes before organizing them.
+### Student Profile & Preferences
+Personal settings that affect the whole system:
+- career / program
+- semester
+- preferred study hours
+- daily energy level (morning / afternoon / night)
+- color theme and visual style
 
-- Tasks  
-  Individual actionable items with priority, due date and status.
+---
 
-- Projects  
-  High-level goals that group tasks and define next actions.
+### Subjects (Assignatures)
+Each subject represents a real class.
 
-- Habits  
-  Repeating behaviors with frequency and completion tracking.
+A subject contains:
+- subject name
+- professor (optional)
+- color / icon
+- weekly class schedule
+- assignments
+- exams
+- study plan
 
-- Today View  
-  A unified daily dashboard that brings together all relevant information.
+---
 
-- Weekly Review  
-  A review space for progress and unfinished work.
+### Schedule (Weekly Planner)
+A visual weekly calendar used only for:
+- class blocks
+- planned study sessions
+- exams or important academic events
+
+The schedule is shown as:
+- a soft grid with colored blocks per subject
+- no productivity clutter
+- only time-based activities
+
+---
+
+### Assignments & Academic Tasks
+All academic tasks belong to a subject.
+
+Each task includes:
+- subject
+- type (homework, project, exam, reading, quiz)
+- due date
+- estimated study time
+- status
+
+---
+
+### Study Planner
+A lightweight study planning system.
+
+Allows the student to:
+- create study sessions for a subject
+- split large topics into small study blocks
+- plan what to study today or this week
+
+Study sessions are different from tasks:
+they represent **learning time**, not deliverables.
+
+---
+
+### Personal Projects
+Non-academic projects such as:
+- portfolio projects
+- side apps
+- learning goals
+
+Each project contains:
+- description
+- tasks
+- next action
+
+---
+
+### Habits
+Simple personal habits related to:
+- health
+- learning consistency
+- routines
+
+---
+
+### Inbox
+Quick capture for:
+- ideas
+- reminders
+- random tasks
+- things to later assign to a subject or project
+
+---
+
+### Today View (Student Dashboard)
+A single daily view that shows:
+
+- today’s classes
+- assignments and tasks due or overdue
+- today’s planned study sessions
+- habits scheduled for today
+- next action from one active personal project
+
+This is the main focus screen of the app.
+
+---
+
+### Weekly Review
+A reflective and academic-oriented review:
+
+- completed assignments
+- study sessions completed
+- subjects that were neglected
+- unfinished tasks
+- preparation for next week
 
 ---
 
 ## Incremental Development Methodology
 
-The project will be developed using three structured phases.
+The project is developed in three structured phases.
 
 ---
 
-## Phase 1 – Structure, Base Layout and AI Requirements
+## Phase 1 – Structure, Layout and Requirements
 
 Focus:
-- No application logic
-- No database
-- No real interactivity
+- no logic
+- no database
+- no real interactivity
 
 Main objective:
-Create the visual structure of the platform and define the functional and AI-related requirements.
+Build the complete visual structure of the student platform and define functional and AI requirements.
 
 Deliverables:
 
-- Project folder structure
-- Static HTML pages for:
-  - Inbox
+- project folder structure
+- static HTML pages for:
   - Today
+  - Subjects
+  - Schedule
+  - Study Planner
   - Projects
   - Habits
-  - Review
-- Common layout with:
+  - Inbox
+  - Weekly Review
+- common layout with:
   - sidebar navigation
-  - header with search and quick add button
-  - main content area
-- Reusable UI elements:
-  - task cards
+  - top header with quick add and search
+- reusable UI components:
+  - subject cards
+  - assignment cards
+  - study session cards
   - habit cards
   - project cards
-- Base styling using CSS
-- Documentation files describing:
+  - schedule blocks
+- base styling (cute and calm visual system)
+- documentation:
   - system scope
   - user stories
   - business rules
   - future AI behavior
 
-At this stage, all data is static and only used for visual representation.
+All data is static.
 
 ---
 
 ## Phase 2 – JavaScript Logic and Interactivity
 
 Focus:
-- Client-side logic
-- State management
-- Dynamic rendering
+- client-side logic
+- state handling
+- dynamic rendering
 
 Main objective:
-Transform the static interface into an interactive application using JavaScript.
+Turn the static student interface into a real interactive system.
 
-Main features to implement:
+Main features:
 
-- Create, edit and delete tasks
-- Mark tasks and habits as completed
-- Filter and visualize tasks in the Today view
-- Associate tasks with projects
-- Store and manipulate data in memory or local storage
-- Basic form validation
-- UI state updates without page reloads
+- create and edit subjects
+- add class schedule blocks
+- create academic tasks linked to subjects
+- create study sessions linked to subjects
+- mark tasks, study sessions and habits as completed
+- filter Today view by:
+  - due tasks
+  - planned study
+  - classes
+- move inbox items into subjects or projects
+- store data in memory or localStorage
+- UI updates without reload
 
-No React and no database are used in this phase.
+No frameworks and no database.
 
 ---
 
 ## Phase 3 – React, Firebase and Deployment
 
 Focus:
-- Component-based architecture
-- Cloud database
-- Authentication
-- Deployment
+- component architecture
+- cloud persistence
+- authentication
 
 Main objective:
-Rebuild the application using modern frontend and backend tools.
+Rebuild the system as a real production-ready student platform.
 
 Planned technologies:
 
-- React for UI componentization
-- Firebase for:
+- React
+- Firebase:
   - authentication
   - real-time database
   - hosting
 
 Main features:
 
-- User authentication
-- Persistent storage of:
-  - tasks
-  - projects
+- user accounts
+- persistent data:
+  - subjects
+  - schedules
+  - assignments
+  - study sessions
   - habits
-  - completion history
-- Real-time synchronization
-- Modular React components
-- Production-ready deployment
+  - projects
+- real-time synchronization
+- modular components
+- responsive design
 
 ---
 
-## Functional Scope (MVP)
+## Functional Scope (MVP – Student Version)
 
-The minimum viable product includes:
+The MVP includes:
 
-- Project management
-  - create and update projects
-  - assign tasks to projects
+### Subjects
+- create and edit subjects
+- assign color and icon
+- manage class schedule per subject
 
-- Task management
-  - create, edit and delete tasks
-  - due date and priority
-  - mark tasks as completed
+### Academic Tasks
+- create, edit and delete assignments
+- link tasks to subjects
+- due date and task type
+- mark as completed
 
-- Habit management
-  - create habits
-  - define simple frequency (daily or selected weekdays)
-  - mark habit completion
+### Study Sessions
+- create study sessions for a subject
+- estimate study time
+- mark session as completed
 
-- Today dashboard
-  - tasks due today or overdue
-  - habits scheduled for today
-  - next actions for active projects
+### Schedule
+- visual weekly calendar
+- class blocks
+- study blocks
+- exam blocks
+
+### Habits
+- simple daily or weekday habits
+
+### Today Dashboard
+- today’s classes
+- due or overdue assignments
+- planned study sessions
+- habits
+- one active personal project action
 
 ---
 
-## Out of Scope for the Initial Version
+## Out of Scope (First Version)
 
-The following features are planned for future iterations:
-
-- advanced habit rules (for example: X times per week)
-- notifications and reminders
-- offline-first behavior
-- calendar synchronization
+- notifications
+- calendar sync with Google or Apple
+- offline mode
 - advanced analytics
-- real AI integration
+- AI automation
+- recommendation engine
 
 ---
 
 ## Future AI Support – Functional Definition
 
-The system is designed to support an AI assistant in later versions.
+The system is prepared for an AI assistant focused on student productivity.
 
-The AI will be able to answer questions such as:
+The AI will answer:
 
-- What should I prioritize today?
-- Which habits are failing this week?
-- Summarize my progress on a specific project
-- Suggest next actions for a project
+- What should I study today?
+- Which subject am I falling behind in?
+- How balanced is my study time this week?
+- What is the next best study block for this subject?
+- Summarize my progress in a subject or project
 
-The AI will use the following data:
+The AI will use:
 
-- tasks (status, priority, due dates, project, tags)
-- habits (frequency and completion history)
-- projects (status, description and next actions)
+- subjects
+- assignments and deadlines
+- study sessions and completion history
+- habits
+- schedule data
 - activity logs
 
-No AI implementation is required during the current development phases. Only the specification is defined.
+Only the specification is defined at this stage.
 
 ---
 
 ## Educational Objectives
 
-This project is designed to strengthen skills in:
+This project strengthens:
 
-- web layout and UI structure
-- JavaScript application logic
-- data modeling and relationships
-- frontend architecture with React
-- cloud services integration
-- real-world product thinking
+- UI and layout design for real users
+- JavaScript state and rendering
+- data modeling (subjects, tasks, schedules, sessions)
+- React architecture
+- Firebase integration
+- product design for real student needs
 
 ---
 
 ## Summary
 
-Personal Work OS is a productivity platform that centralizes tasks, habits and projects into a single system.  
-It follows a clear incremental development strategy that allows the application to grow from static design to a complete full-stack solution.
+Personal Work OS – Student Edition is a personalized academic productivity platform that merges:
+
+subjects, assignments, schedules, study sessions, habits and personal projects into one calm and cute workspace.
+
+It evolves step-by-step from static design to a full-stack real application and is fully aligned with a computer engineering student’s real daily workflow.
